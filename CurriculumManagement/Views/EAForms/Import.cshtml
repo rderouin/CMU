@@ -1,0 +1,50 @@
+﻿@model CurriculumManagement.ViewModels.ImportViewModel
+    
+@{
+    ViewBag.Title = "Import";
+}
+
+<h2>Import</h2>
+
+<div>
+    @using (Html.BeginForm("Import", "Import", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <p class="upload-file">
+            @Html.TextBoxFor(m => m.File, new { type = "file" })
+            @Html.ValidationMessageFor(m => m.File)
+        </p>
+        <p>
+            <input type="submit" value="Upload file" />
+        </p>
+    }
+
+    @if (Model.ImportResults.Count > 0)
+    {
+        <div>
+            <h3>Import Results</h3>
+
+            @{
+        string resultsString = "";
+        for (int i = 0; i < Model.ImportResults.Count; i++)
+        {
+            if (i == Model.ImportResults.Count - 1)
+            {
+                resultsString += Model.ImportResults[i];
+            }
+            else
+            {
+                resultsString += Model.ImportResults[i] + "\r\n";
+            }
+        }
+
+            }
+            @Html.TextArea("ImportResults", resultsString, new { @class = "large-textarea"})
+
+        </div>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,117 @@
+﻿@model CurriculumManagement.ViewModels.SearchViewModel
+@using PagedList.Mvc;
+@using CurriculumManagement.Helpers
+@using CurriculumManagement.Models.POCO;
+@{
+    ViewBag.Title = "EA Form Search";
+}
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#SearchDateFrom').datepicker({ dateFormat: 'yy-mm-dd' });
+        $('#SearchDateTo').datepicker({ dateFormat: 'yy-mm-dd' });
+    });
+
+    $(document).ready(function () {
+        $('input.externalurl').click(function () { $(this).select(); });
+    });
+
+</script>
+
+<h2>EA Form Search</h2>
+
+<p>
+    @using (Html.BeginForm("Index", "EAForms", FormMethod.Get))
+    {
+        @Html.AntiForgeryToken()
+    <p class='centerAlign'>
+
+        Academic Year: 
+
+    </p>
+    <p>
+        Search String: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { style = "width:200px;" })&nbsp;&nbsp;
+        Activity Date: @Html.TextBox("SearchDateFrom", ViewBag.CurrentDateFrom as string, new { style = "width:100px;" }) to @Html.TextBox("SearchDateTo", ViewBag.CurrentDateTo as string, new { style = "width:100px;" })&nbsp;&nbsp;
+        @Html.DropDownList("SelectedStatusValue", new SelectList(Model.EAFormStatuses, "ID", "Name", ViewBag.CurrentStatusValue)) &nbsp;&nbsp;
+        Hide extracted originals @Html.CheckBox("HideExtractedOriginals", true) &nbsp; &nbsp;
+        <input type="submit" value="Search" />
+    </p>
+    }
+
+</p>
+    
+    <h3>Result count: @Model.ReturnedForms.TotalItemCount</h3>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th class ="course-column">
+                    @Html.ActionLink("Course", "Index", new { sortOrder = ViewBag.CourseSortParm, currentFilter = ViewBag.CurrentFilter, SearchDateFrom = ViewBag.CurrentDateFrom, SearchDateTo = ViewBag.CurrentDateTo, SelectedStatusValue = ViewBag.CurrentStatusValue })
+                </th>
+                <th class ="block-column">
+                    @Html.ActionLink("Block/Week", "Index", new { sortOrder = ViewBag.BlockWeekTitleSortParm, currentFilter = ViewBag.CurrentFilter, SearchDateFrom = ViewBag.CurrentDateFrom, SearchDateTo = ViewBag.CurrentDateTo, SelectedStatusValue = ViewBag.CurrentStatusValue })
+                </th>
+                <th class="activity-title-column">
+                    @Html.ActionLink("Activity Title", "Index", new { sortOrder = ViewBag.ActivityTitleSortParm, currentFilter = ViewBag.CurrentFilter, SearchDateFrom = ViewBag.CurrentDateFrom, SearchDateTo = ViewBag.CurrentDateTo, SelectedStatusValue = ViewBag.CurrentStatusValue })
+                </th>
+                <th class="activity-type-column">
+                    @Html.ActionLink("Activity Type", "Index", new { sortOrder = ViewBag.ActivityTypeSortParm, currentFilter = ViewBag.CurrentFilter, SearchDateFrom = ViewBag.CurrentDateFrom, SearchDateTo = ViewBag.CurrentDateTo, SelectedStatusValue = ViewBag.CurrentStatusValue })
+                </th>
+                <th class ="activity-date-column">
+                    @Html.ActionLink("Activity Date", "Index", new { sortOrder = ViewBag.StartDateSortParm, currentFilter = ViewBag.CurrentFilter, SearchDateFrom = ViewBag.CurrentDateFrom, SearchDateTo = ViewBag.CurrentDateTo, SelectedStatusValue = ViewBag.CurrentStatusValue })
+                </th>
+                <th class ="status-column">
+                    @Html.ActionLink("Status", "Index", new { sortOrder = ViewBag.StatusSortParm, currentFilter = ViewBag.CurrentFilter, SearchDateFrom = ViewBag.CurrentDateFrom, SearchDateTo = ViewBag.CurrentDateTo, SelectedStatusValue = ViewBag.CurrentStatusValue })
+                </th>
+                <th class ="url-column">
+                    External URL
+                </th>
+                <th class ="options-column"></th>
+            </tr>
+
+            @foreach (var item in Model.ReturnedForms)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Course)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BlockWeekTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ActivityTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ActivityType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status.Name)
+                    </td>
+                    <td>
+                        @{string url = String.Format("{0}://{1}/EA/{2}", HttpContext.Current.Request.Url.Scheme, HttpContext.Current.Request.Url.Authority, item.ID);
+                //string url = String.Format("http://{0}/EA/{1}", HttpContext.Current.Request.Url.Authority, item.ID);
+                        }
+                        <input type="text" class="externalurl" value="@url" />
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ID })
+                        @if (Model.IsAdmin)
+                        {
+                            <span> | <a href="@Url.Action("Delete", "EAForms", new { id = item.ID })">Delete</a></span>
+                        }
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <br />
+    Page @(Model.ReturnedForms.PageCount < Model.ReturnedForms.PageNumber ? 0 : Model.ReturnedForms.PageNumber) of @Model.ReturnedForms.PageCount
+
+    @Html.PagedListPager(Model.ReturnedForms, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

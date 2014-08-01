@@ -1,0 +1,143 @@
+﻿@model CurriculumManagement.ViewModels.ParentChildCategoriesViewModel
+
+@*@Scripts.Render("~/bundles/jquery")*@
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui.js"></script>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-ui.min.js"></script>
+
+
+<script type="text/jscript">
+
+
+
+    $(function () {
+        $('#@Html.IdForModel()_ParentCategoryList').change(function () {
+            var url = '@Model.ChildValuesAJAXFetchURL' + $('#@Html.IdForModel()_ParentCategoryList').val();
+
+            $.getJSON(url, function (data) {
+                var items = ''; //'<option>Select a Theme</option>';
+                var selectedString = " selected";
+                $.each(data, function (i, theme) {
+                    items += "<option value='" + theme.Value + "'" + selectedString + ">" + theme.Text + "</option>";
+                    selectedString = "";
+                });
+                $('#@Html.IdForModel()_ChildrenListBox').html(items);
+            });
+        });
+
+        $('#@Html.IdForModel()_btnAddSelectedChild').click(function () {
+            $("#@Html.IdForModel()_SelectedChildrenList option").prop("selected", false);
+            $('#@Html.IdForModel()_ChildrenListBox option:selected').each(function () {
+                $("#@Html.IdForModel()_ChildrenListBox option").prop("selected", false);
+                @*if (($("#@Html.IdForModel()_SelectedChildrenList option[value='" + $(this).val() + "']").length <= 0) && ($("#@Html.IdForModel()_SelectedChildrenList option").length < 10))
+                {
+                    $('#@Html.IdForModel()_SelectedChildrenList')
+                            .prepend('<option value="' + $(this).val() + '" selected>' + $(this).val() + '</option>')
+                    .val(selectionString) //to select just added item
+                }*@
+                if ($("#@Html.IdForModel()_SelectedChildrenList option[value='" + $(this).val() + "']").length <= 0) //Check to see if already exists
+                {
+                    alert($('#identifier').val());
+
+                    $('#@Html.IdForModel()_SelectedChildrenList')
+                            .prepend('<option value="' + $(this).val() + '" selected>' + $(this).val() + '</option>')
+                    //.val(selectionString) //to select just   added item
+                }
+                else {
+                    $("#@Html.IdForModel()_SelectedChildrenList option[value='" + $(this).val() + "']").prop("selected", true);
+                }
+
+            });
+
+        });
+
+        $('#@Html.IdForModel()_btnRemoveSelection').click(function () {
+            $('#@Html.IdForModel()_SelectedChildrenList option:selected').each(function () { $(this).remove() });
+        });
+
+
+        @*//autocomplete for keywords*@
+        @*//http://jqueryui.com/autocomplete/#remote-jsonp*@
+        @*Begin autocomplete*@
+        $("#txtSearch").autocomplete
+        ({
+            source: '@Url.Action("GetKeywords","EAForms")'
+            , minLength: 2
+            , delay: 500
+            , open: function () { $(this).removeClass("ui-corner-all").addClass("ui-corner-top"); }
+            , close: function () { $(this).removeClass("ui-corner-top").addClass("ui-corner-all"); }
+        });
+        @*End autocomplete*@
+
+        @*Add custom key selected items click event*@
+        function AutoCompleteSelectHandler(event, ui) {
+            var selectedObj = ui.item;
+            $("#KeywordViewModel_ChildrenListBox").append($('<option></option>').val(ui.item.label).html(ui.item.label));
+        }
+
+        $("#@Html.IdForModel()_btnAddKeywords").click
+        (
+          function () {
+              $("#@Html.IdForModel()_SelectedChildrenList option").prop("selected", false);
+
+              if ($("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").length <= 0) //Check to see if already exists
+              {
+                  $("#@Html.IdForModel()_SelectedChildrenList").prepend($('<option></option>').val($("#txtSearch").val()).html($("#txtSearch").val()));
+              }
+              else {
+                  $("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").prop("selected", true);
+              }
+          }
+        );
+
+        $("form").submit(function (e) {
+            $("#@Html.IdForModel()_SelectedChildrenList option").prop('selected', true); //.attr("selected", "selected");
+        });
+    });
+
+</script>
+
+<div class="options-row">
+    <div class="form-options-column">
+        @if (Model.Label == "Keyword(s)")
+        {
+            <input type="hidden" name="identifier" id="identifier" value="Keyword" />
+
+            using (Html.BeginForm("Edit", "EAFormsController"))
+            {
+                @Html.Label("Search Keywords", null, new {@class="form-options-label"}) 
+                @Html.TextBox("searchTerm", null, new {id="txtSearch" })
+            }
+        }
+        else
+        {
+            <input type="hidden" name="identifier" id="identifier" value="other" />
+        }
+        @if (Model.ParentCategoryList != null && Model.ParentCategoryList.Count() > 1)
+        {
+            @Html.DropDownListFor(m => m.ParentCategoryList, Model.ParentCategorySelectList("ParentCategoryName", "ParentCategoryName", "", "Select Category")) <br />
+        }
+            
+        @if (Model.Label != "Keyword(s)")
+        { 
+            @Html.ListBoxFor(m => m.DefaultChildrenList, new SelectList(Model.DefaultChildrenList, "ChildItemName", "ChildItemName"), new { @class="category-select select-options", id = Html.IdForModel() + "_ChildrenListBox" })
+        }
+
+    </div>
+    <div class="form-button-column">
+        @if(Model.Label != "Keyword(s)")
+        {
+            <input type="button" id="@Html.IdForModel()_btnAddSelectedChild" value="Add Selection >>" />
+        }
+        else
+        { 
+            <input type="button" id="@Html.IdForModel()_btnAddKeywords" value="Add Selection >>" />
+        }
+    </div>
+    <div class="form-options-column">
+        <span class="form-options-label">Selected @Model.Label</span>
+        @Html.ListBoxFor(m => m.SelectedChildrenList, new SelectList(Model.SelectedChildrenList, "ChildItemName", "ChildItemName"), new { @class = "listbox select-options" })
+        <span class="remove-btn-container"><input type="button" id="@Html.IdForModel()_btnRemoveSelection" class="form-options-remove-btn" value="Remove Selected" /></span>
+    </div>
+</div>

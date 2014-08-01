@@ -1,0 +1,178 @@
+﻿@model CurriculumManagement.Models.EAForm
+@{
+    ViewBag.Title = "Delete EA Form";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EA Form</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AcademicYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcademicYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlockWeekTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlockWeekTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivityTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivityType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityFacilitatorType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivityFacilitatorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherActivityFacilitatorType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherActivityFacilitatorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityFacilitatorNames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivityFacilitatorNames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityFacilitatorDepartments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivityFacilitatorDepartments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abstract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Abstract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LearningObjectives)
+        </dt>
+
+        <dd>
+            @Html.Raw(Html.Encode(Model.LearningObjectives).Replace("\r\n", "<br />"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Keywords)
+        </dt>
+
+        <dd>
+            @Html.Raw(Html.Encode(Model.Keywords).Replace("\r\n", "<br />"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Themes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Themes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Formulary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Formulary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastSubmitted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastSubmitted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InstructorSignature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InstructorSignature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.Name)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Details", "Details", new { id = Model.ID }) |
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+            @*@Html.ActionLink("Back to List", "Index")*@
+            <a href="javascript: window.history.go(-1)">Back to List</a>
+        </div>
+    }
+</div>

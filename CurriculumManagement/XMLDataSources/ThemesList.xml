@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfChildItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildItem>
+    <ParentCategoryName>Foundational Medical Sciences</ParentCategoryName>
+    <ChildItemName>Anatomy</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Foundational Medical Sciences</ParentCategoryName>
+    <ChildItemName>Histology</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Foundational Medical Sciences</ParentCategoryName>
+    <ChildItemName>Molecular Biology</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Foundational Medical Sciences</ParentCategoryName>
+    <ChildItemName>Physiology</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Foundational Medical Sciences</ParentCategoryName>
+    <ChildItemName>Microbiology (Infectious Diseases)</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Foundational Medical Sciences</ParentCategoryName>
+    <ChildItemName>Genetics</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Foundational Medical Sciences</ParentCategoryName>
+    <ChildItemName>Pathogenesis / Pathophysiology</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Diagnostic Sciences</ParentCategoryName>
+    <ChildItemName>Radiology / Diagnostic Imaging</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Diagnostic Sciences</ParentCategoryName>
+    <ChildItemName>Clinical / Medical Laboratory Sciences</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Therapeutics</ParentCategoryName>
+    <ChildItemName>Pharmacology and Therapeutics</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Therapeutics</ParentCategoryName>
+    <ChildItemName>Non-Pharmacological Therapy</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Therapeutics</ParentCategoryName>
+    <ChildItemName>Complementary / Alternative Therapies / Holistic Health</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Populations, Diversity and Equity</ParentCategoryName>
+    <ChildItemName>Public Health</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Populations, Diversity and Equity</ParentCategoryName>
+    <ChildItemName>Socioeconomic Factors and Health</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Populations, Diversity and Equity</ParentCategoryName>
+    <ChildItemName>Vulnerable Populations</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Populations, Diversity and Equity</ParentCategoryName>
+    <ChildItemName>Geriatrics</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Populations, Diversity and Equity</ParentCategoryName>
+    <ChildItemName>World Health</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Populations, Diversity and Equity</ParentCategoryName>
+    <ChildItemName>Prevention</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Populations, Diversity and Equity</ParentCategoryName>
+    <ChildItemName>Cultural Competency (Advocacy)</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Identity and Professionalism</ParentCategoryName>
+    <ChildItemName>Communication</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Identity and Professionalism</ParentCategoryName>
+    <ChildItemName>Professionalism</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Identity and Professionalism</ParentCategoryName>
+    <ChildItemName>Medical Ethics, Legislation and Jurisprudence</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Health Systems</ParentCategoryName>
+    <ChildItemName>Patient Safety</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Health Systems</ParentCategoryName>
+    <ChildItemName>Collaboration</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Health Systems</ParentCategoryName>
+    <ChildItemName>Delivery of Health Care (Health Care Systems)</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Health Systems</ParentCategoryName>
+    <ChildItemName>Medical Informatics (e-Health)</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Health Systems</ParentCategoryName>
+    <ChildItemName>Leadership</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Health Systems</ParentCategoryName>
+    <ChildItemName>Quality Improvement</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Innovation and Scholarship</ParentCategoryName>
+    <ChildItemName>Evidence-Based Medicine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Innovation and Scholarship</ParentCategoryName>
+    <ChildItemName>Scholarship</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Clinical Skills</ParentCategoryName>
+    <ChildItemName>Medical History Taking</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>Clinical Skills</ParentCategoryName>
+    <ChildItemName>Physical Examination</ChildItemName>
+  </ChildItem>
+</ArrayOfChildItem>

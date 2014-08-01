@@ -1,0 +1,12 @@
+﻿@model CurriculumManagement.ViewModels.CWLLogin
+<html>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <h4>Add CWL Login Id</h4>
+    <hr />
+    @Html.TextBoxFor(model => model.LoginId)
+    <input type="submit" value="Save" />
+}
+</html>

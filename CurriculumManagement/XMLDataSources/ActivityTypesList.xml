@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfChildItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Case-Based Instruction/Learning</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Clinical Experience - Ambulatory</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Clinical Experience - Inpatient</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Concept Mapping</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Conference</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Demonstration</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Discussion, Large Group (>12)</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Discussion, Small Group (≤12)</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Games</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Independent Learning</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Journal Club</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Laboratory</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Lecture</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Mentorship</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Patient Presentation - Faculty</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Patient Presentation - Learner</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Peer Teaching</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Preceptorship</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Problem-Based Learning (PBL)</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Reflection</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Research</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Role Play/Dramatization</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Self-Directed Learning</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Service Learning Activity</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Simulation</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Team-Based Learning (TBL)</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Team-Building</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Tutorial</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Ward Rounds</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>All Activity Types</ParentCategoryName>
+    <ChildItemName>Workshop</ChildItemName>
+  </ChildItem>
+</ArrayOfChildItem>

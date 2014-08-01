@@ -1,0 +1,44 @@
+﻿@model CurriculumManagement.ViewModels.ParentChildCategoriesViewModel
+
+@Scripts.Render("~/bundles/jquery")
+
+<script type="text/jscript">
+
+    $(function () {
+        $('#ParentCategoryList').change(function () {
+            var url = '/EAForms/ThemesList/?selectedParent=' + $('#ParentCategoryList').val();
+            $.getJSON(url, function (data) {
+                var items = ''; //'<option>Select a Theme</option>';
+                $.each(data, function (i, theme) {
+                    items += "<option value='" + theme.Value + "'>" + theme.Text + "</option>";
+                });
+                $('#ChildrenListBox').html(items);
+            });
+        });
+
+        $('#btnAddSelectedChild').click(function () {
+            var selectionString = $('#ChildrenListBox').val();
+            $('#SelectedChildrenList')
+                    .append('<option value="' + selectionString + '">' + selectionString + '</option>')
+                    .val(selectionString)
+            ;
+        });
+
+        $("form").submit(function (e) {
+            $("#SelectedChildrenList option").attr("selected", "selected");
+        });
+    });
+</script>
+
+<div class="form-group">
+    <label class="control-label col-md-2">Themes</label>
+    <div class="col-md-10">
+        @*@Html.ListBoxFor(m => m.ThemeCategories, new SelectList(Model.ThemeCategories, "ParentCategoryName", "ParentCategoryName"))*@
+        @Html.ListBoxFor(m => m.ParentCategoryList, new SelectList(Model.ParentCategoryList, "ParentCategoryName", "ParentCategoryName"))
+        @*<select id="ThemesBox" name="ThemesBox" multiple="multiple"></select>*@
+        <select id="ChildrenListBox" name="ChildrenListBox" multiple="multiple"></select>
+        <input type="button" id="btnAddSelectedChild" value="Add" />
+        @*@Html.ListBoxFor(m => m.SelectedThemesList, new SelectList(Model.SelectedThemesList))*@
+        @Html.ListBoxFor(m => m.SelectedChildrenList, new SelectList(Model.SelectedChildrenList))
+    </div>
+</div>

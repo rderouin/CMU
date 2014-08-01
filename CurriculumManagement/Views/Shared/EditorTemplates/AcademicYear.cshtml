@@ -1,0 +1,6 @@
+﻿@using CurriculumManagement.Models.POCO
+@model AcademicYear
+@Html.DropDownListFor(
+    x => x.SelectedYear,
+    new SelectList(Model.Years, "Value", "Text", Model.SelectedYear)
+)

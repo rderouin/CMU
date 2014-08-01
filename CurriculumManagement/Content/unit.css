@@ -1,0 +1,278 @@
+/* Unit editable CSS */
+
+/** Unit Bar background color **/
+#ubc7-unit {
+   background: #2F5D7C; /* For White on Blue, and Grey on White */
+   /* background: #002145; */ /* For Blue on White, and White on Grey */
+}
+
+/** Social Icons **/
+#ubc7-unit-social-icons i {
+    color: #002145;
+}
+
+/*navbar logout buttons*/
+.logout-form{
+    float:right;
+    margin:0;
+}
+.nav{
+    width:100%;
+}
+.nav-user-name{
+    color:#002145;
+    height:100%;
+    padding:10px 15px 11px;
+}
+
+/*checkbox on search page*/
+#HideExtractedOriginals{
+    margin:0;
+}
+
+
+/*makes details line up, prevents empty fields not taking space*/
+dd:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/*style ie10 file labels*/
+#File::-ms-browse{
+    margin-left:5px;
+}
+
+/*form display options*/
+@media screen and (max-width:980px){
+    .logout-form {
+        float:none;
+    }
+    .nav-user-name{
+        display:none;
+    }
+}
+/*radio button*/
+input[type="radio"]{
+    margin:0 3px;
+}
+/*form controls*/
+.form-horizontal .controls{
+    padding-top:4px;
+}
+/*review form labels*/
+#review-form .control-label{
+    margin-right:5px;
+}
+#review-form .form-horizontal .control-label{
+    width:150px;
+}
+/*form tooltips*/
+#review-form .tooltip{
+    opacity:.88;
+    display:inline;
+}
+
+.review{
+    max-width:980px;
+}
+/*review form text areas*/
+.review .large-textarea,
+.review textarea,
+.review input[type=text] {
+    width:98%;
+}
+/*import results*/
+.large-textarea{
+    width:80%;
+    min-width:260px;
+    min-height:350px;
+}
+
+.review select {
+    width: 100%;
+    max-width:300px;
+}
+/*add width and height to select options*/
+select.select-options{
+    width:100%;
+    height:200px;
+}
+/*style select field title*/
+.form-options-label{
+    font-weight:bold;
+    line-height:30px;
+}
+.form-options-remove-btn{
+    float:right;
+    margin:5px 0 0 0;
+}
+/*positions options fields*/
+.options-row{
+    max-width:800px;
+    height:260px;
+    padding:0.548em 0 0.548em 0.548em;
+    background-color:#f5f2f2;
+}
+.form-options-column{
+    float:left;
+    width:34%;
+    margin-right:1%;
+}
+.form-button-column{
+    float:left;
+    width:15.75%;
+    margin-right:2.5%;
+    margin-left:1.5%;
+    line-height:26px;
+    margin-top:110px;
+}
+/*form options media queries*/
+@media screen and (max-width:950px){
+    .form-options-column{
+        width:100%;
+        display:block;
+        text-align:center;
+    }
+    .form-options-label{
+        display:block;
+    }
+    .form-button-column{
+        width:100%;
+        text-align:center;
+        margin:15px 0;
+    }
+    .remove-btn-container{
+        width:100%;
+        display:block;
+        text-align:center;
+    }
+    .form-options-remove-btn{
+        float:none;
+    }
+    .options-row{
+        height:550px
+    }
+}
+
+/*Responsive Table for review pages*/
+.activity-type-column{
+    width:150px;
+}
+.options-column {
+    width:130px;
+}
+.table-responsive{
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+    /* Non standard for webkit */
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+.table{
+    table-layout:fixed;
+}
+.table td,
+.table th{
+    padding-left:10px;
+    padding-right:10px;
+}
+/*table column widths*/
+.course-column{
+    width:7%;
+    min-width:100px;
+}
+.block-column{
+    width:10%;
+    min-width:100px;
+}
+.activity-title-column{
+    width:10%;
+    min-width:100px;
+}
+.activity-type-column{
+    width:10%;
+    min-width:150px;
+}
+.activity-date-column{
+    width:10%;
+    min-width:100px;
+}
+.status-column{
+    width:6%;
+    min-width:40px;
+}
+.url-column{
+    width:10%;
+    min-width:110px;
+}
+.options-column{
+    width:10%;
+    min-width:200px;
+}
+
+input[type="text"].externalurl{
+    width:100%;
+    min-width:110px;
+    height:100%;
+}
+
+
+/* styles for validation helpers */
+.control-group{
+    position:relative;
+}
+.required {
+    color:red;
+    margin-left:2px;
+    font-size:1.3em;
+    float: left;
+}
+#review-form .required{
+    margin-left:-5px;
+    margin-right:3px;
+}
+
+.required:hover:after{
+    z-index:99;
+    content:"this field is required";
+    position:absolute;
+    left:50px;
+    top:1.4em;
+    font-size:.8em;
+    display:inline;
+}
+
+
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/*prevent overflow-auto from clipping side of form on edit page*/
+.review .tab-content{
+    overflow:visible;
+}

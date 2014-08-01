@@ -1,0 +1,281 @@
+﻿@model CurriculumManagement.ViewModels.EditPageViewModel
+@using CurriculumManagement.Models.POCO
+@{
+    ViewBag.Title = "EA Form Edit";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var successMsg = "@ViewBag.SuccessMessage";
+        if (successMsg != "") {
+            alert(successMsg);
+        }
+        
+    });
+
+    $(document).ready(function () {
+        $('#StartDate').datepicker({ dateFormat: 'yy-mm-dd' });
+
+        //IE 8 (and below bug)
+        //
+        //Replace the date validator with the dateISO validator.
+        //By default, the jQuery date validation method uses JavaScript's
+        //built-in Date object to test if the date is valid. Internet Explorer 8
+        //and below do not support using the ISO Date Format for the Date
+        //object (see JavaScript Version Information), which causes the validation to fail.
+        $.validator.methods["date"] = function (value, element) {
+            return $.validator.methods.dateISO.apply(this, arguments);
+        };
+    });
+
+</script>
+
+<h2>Edit</h2>
+
+<div class="review">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#form" data-toggle="tab">Form</a></li>
+        <li><a href="#history" data-toggle="tab">View History</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="form">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>EA Form</h4>
+                    <hr />
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(model => model.ID)
+                    @Html.HiddenFor(model => model.LastSubmitted)
+                    @Html.HiddenFor(model => model.LastUpdated)
+
+                    <div class="control-group">
+                        @Html.Label("External URL", new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBox("externalUrl", String.Format("{0}://{1}/EA/{2}",HttpContext.Current.Request.Url.Scheme, HttpContext.Current.Request.Url.Authority, Model.ID), new { disabled = true })
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.AcademicYear, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.DropDownListFor(x => x.AcademicYear,
+                            new SelectList(AcademicYear.GetAcademicYears, "Value", "Text", Model.AcademicYear))
+                            @Html.ValidationMessageFor(model => model.AcademicYear)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.Course, new { @class = "control-label" })<span class="required">*</span>
+                        <div class="controls">
+                            @Html.EditorFor(model => model.Course)
+                            @Html.ValidationMessageFor(model => model.Course)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.BlockWeekTitle, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.EditorFor(model => model.BlockWeekTitle)
+                            @Html.ValidationMessageFor(model => model.BlockWeekTitle)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.ActivityTitle, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.EditorFor(model => model.ActivityTitle)
+                            @Html.ValidationMessageFor(model => model.ActivityTitle)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.ActivityTypesViewModel, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.EditorFor(model => model.ActivityTypesViewModel)
+                            @Html.ValidationMessageFor(model => model.ActivityTypesViewModel)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.StartDate, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.StartDate, "{0:yyyy-MM-dd}")
+                            @Html.ValidationMessageFor(model => model.StartDate)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.ActivityFacilitatorType, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.RadioButtonFor(m => m.ActivityFacilitatorType, "Instructor")Instructor&nbsp;&nbsp;
+                            @Html.RadioButtonFor(m => m.ActivityFacilitatorType, "Week Chair")Week Chair&nbsp;&nbsp;
+                            @Html.RadioButtonFor(m => m.ActivityFacilitatorType, "Course Director")Course Director&nbsp;&nbsp;
+                            @Html.RadioButtonFor(m => m.ActivityFacilitatorType, "Other")Other
+                            @*@Html.TextBoxFor(m => m.OtherActivityFacilitatorType)*@
+                            @Html.ValidationMessageFor(model => model.ActivityFacilitatorType)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.ActivityFacilitatorNames, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.EditorFor(model => model.ActivityFacilitatorNames)
+                            @Html.ValidationMessageFor(model => model.ActivityFacilitatorNames)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.ActivityFacilitatorDepartments, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.DropDownListFor(x => x.ActivityFacilitatorDepartments,
+                                new SelectList(DepartmentList.GetDepartments, "Value", "Text", Model.ActivityFacilitatorDepartments),
+                                "Select Department")
+                            @Html.ValidationMessageFor(model => model.ActivityFacilitatorDepartments)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.Abstract, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextAreaFor(model => model.Abstract, new { rows = 10, @class = "textArea" })
+                            @Html.ValidationMessageFor(model => model.Abstract)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.LearningObjectives, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextAreaFor(model => model.LearningObjectives, new { rows = 10, @class = "textArea" })
+                            @Html.ValidationMessageFor(model => model.LearningObjectives)
+                        </div>
+                    </div>
+
+                    @*<div class="control-group">
+                        @Html.LabelFor(model => model.Keywords, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextAreaFor(model => model.Keywords, new { rows = 10, @class = "textArea" })
+                            @Html.ValidationMessageFor(model => model.Keywords)
+                        </div>
+                    </div>*@
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.KeywordViewModel, new { @class = "control-label" })
+                    </div>
+                    <div class="control-group">
+                        @Html.EditorFor(model => model.KeywordViewModel)
+                        @Html.ValidationMessageFor(model => model.KeywordViewModel)
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.ThemesViewModel, new { @class = "control-label" })
+                    </div>
+                    <div class="control-group">
+                        @Html.EditorFor(model => model.ThemesViewModel)
+                        @Html.ValidationMessageFor(model => model.ThemesViewModel)
+                    </div>
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.FormularyViewModel, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.EditorFor(model => model.FormularyViewModel)
+                            @Html.ValidationMessageFor(model => model.FormularyViewModel)
+                        </div>
+                    </div>
+
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.LastSubmitted, new { @class = "control-label" })
+                        <div class="controls">
+                            @if (Model.LastSubmitted == null)
+                            {
+                                <p>No Record</p>
+                            }
+                            else
+                            {
+                                @Html.DisplayFor(model => model.LastSubmitted)
+                            }
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.LastUpdated, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.DisplayFor(model => model.LastUpdated)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.InstructorSignature, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.EditorFor(model => model.InstructorSignature)
+                            @Html.ValidationMessageFor(model => model.InstructorSignature)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        @Html.LabelFor(model => model.Status, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.DropDownListFor(
+                    model => model.SelectedStatusValue,
+                    new SelectList(Model.EAFormStatuses, "ID", "Name")
+                )
+                            @Html.ValidationMessageFor(model => model.Status)
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="col-md-offset-2 controls">
+                            <input type="submit" value="Save" name="Command" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+        <div class="tab-pane" id="history">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover smalltext">
+                    <tr>
+                        <th class="course-column">
+                            @Html.DisplayName("Date/Time")
+                         </th>
+                        <th class="course-column">
+                            @Html.DisplayName("User")
+                        </th>
+                        <th class="course-column">
+                            @Html.DisplayName("Status")
+                        </th>
+                    </tr>
+                    @foreach (var item in Model.SaveHistory)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TimeStamp)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UserId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status.Name)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Details", "Details", new { id = Model.ID }) |
+    @*@Html.ActionLink("Back to List", "Index")*@
+    <a href="javascript: window.history.go(-1)">Back</a>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

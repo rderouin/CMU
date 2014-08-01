@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfChildItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>ACE inhibitors ~ Ramipril</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Acetaminophen ~ Acetaminophen</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Acne ~ Isotretinoin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Adenosine ~ Adenosine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>ADP blockers ~ Clopidogrel</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Alkylator ~ Cyclophosphamide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Alpha-blockers ~ Terazosin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Alpha-blockers-selective ~ Tamsulosin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Aminoglycosides ~ Gentamicin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Androgens ~ Testosterone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anesthetics-inhaled ~ Sevoflurane</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anesthetics-IV ~ Ketamine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Angiotensin receptor block ~ Losartan</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anthracyclines ~ Doxorubicin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anti-androgen ~ Flutamide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anticholinergics ~ Tolterodine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antidiarrheals ~ Loperamide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anti-estrogen ~ Tamoxifen</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anti-ethanol ~ Disulfuram</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antihistamines ~ Hydroxyzine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anti-inflammatories ~ 5-Asa</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anti-malarial ~ Chloroquine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antimetabolites ~ 5-Fluorouracil</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antinauseants ~ Dimenhydrinate</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antiparasitics ~ Albendazole</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antipsychotics-1st gen ~ Haloperidol</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antipsychotics-2nd gen ~ Olanzapine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antipsychotics-3rd gen ~ Aripiprazole</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Anti-ulcer ~ H. pylori Protocol</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antivirals-HIV ~ HAART</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antivirals-HSV ~ Acyclovir</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Antivirals-influenza ~ Oseltamivir</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Azole antifungals ~ Fluconazole</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Barbiturates ~ Phenobarbital</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Benzodiazepine antagonist ~ Flumazenil</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Benzodiazepines ~ Lorazepam</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Beta blockers ~ Carvedilol</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Beta blockers ~ Metoprolol</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Beta blockers ~ Propranolol</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Beta blockers ~ Sotalol</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Beta-2 agonists ~ Salbutamol Inhaler</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Biguanides ~ Metformin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Bisphosphonates ~ Alendronate</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Botulinum toxin ~ Botox</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Ca channel blocker DHP ~ Amlodipine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Ca channel blocker non-DHP ~ Diltiazem</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Calcineurin inhibitor ~ Cyclosporine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Carbamazepine ~ Carbamazepine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Cephalosporins ~ Cephalexin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Cholinesterase inhibitor ~ Donepezil</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Class III antiarrhythmics ~ Amiodarone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Colchicine ~ Colchicine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>COX-2 inhibitors ~ Celecoxib</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Digitalis glycosides ~ Digoxin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Direct thrombin inhibitor ~ Dabigatran</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Dopamine ~ Dopamine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Dopamine agonists ~ Pramipexole</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Estrogen antagonists ~ Clomiphene</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Estrogens ~ Estrogen</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Folate analogues ~ Methotrexate</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>GABA analogues ~ Gabapentin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>GABA-β agonists ~ Baclofen</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Glycopeptides ~ Vancomycin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>GnRH analogues ~ Leuprolide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Growth hormone ~ Somatropin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>H2 antagonists ~ Ranitidine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Heparins ~ Enoxaparin, Heparin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>ICS-Long acting beta agonist ~ Salmeterol/Fluticasone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Immune antimetabolites ~ Azathioprine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Incretin enhancers ~ Sitagliptin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Incretin mimetics ~ Exenatide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Inhaled anticholinergics ~ Tiotropium Inhaler</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Inhaled corticosteroids (ICS) ~ Fluticasone Inhaler</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Insulins ~ Insulin NPH, Regular</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Iodine ~ I131</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Iron ~ Ferrous Gluconate</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>K-sparing-aldosterone ant ~ Spironolactone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>K-sparing-Na channel block ~ Amiloride</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Lacosamide ~ Lacosamide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Lamotrigine ~ Lamotrigine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Laxatives ~ Senna</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>L-dopa ~ Levodopa/Carbidopa</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Leukotriene receptor antag ~ Montelukast</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Levetricetam ~ Levetiracetam</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Lincosamide ~ Clindamycin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Local anesthetics ~ Lidocaine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Loop diuretics ~ Furosemide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Macrolides ~ Erythromycin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Metronidazole ~ Metronidazole</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Monoclonal antibody ~ Rituximab</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Mood stabilizers ~ Lithium</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>NaSSA ~ Mirtazapine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>NDRI ~ Bupropion</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Neuromuscular block ~ Rocuronium</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Nicotine ~ Nicotine Replacement</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Nitrates ~ Nitroglycerin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>NMDA antagonists ~ Memantine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Non-Benzodiazepines ~ Zopiclone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>NSAIDs ~ Ibuprofen</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Ophthal-Glaucoma ~ Latanaprost</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Opioid antagonists ~ Naloxone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Opioid withdrawal ~ Methadone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Opioids ~ Fentanyl</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Opioids ~ Morphine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Opioids ~ Tramadol</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Oral contraceptives ~ Various</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Oxytocins ~ Oxytocin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Pediatric drugs ~ Alprostadil</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Pediatric drugs ~ Bovine Surfactant</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Pediatric drugs ~ Polyethylene Glycol</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Pediatric drugs ~ Saline Drops</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Penicillins ~ Amoxicillin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Phenytoin ~ Phenytoin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Polyene antifungals ~ Nystatin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Progestins ~ Progesterone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Prokinetics ~ Metoclopramide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Proton pump inhibitor ~ Omeprazole</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Quinolones ~ Ciprofloxacin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Rifamycins ~ Rifampin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Salicylates ~ Asa</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>SNRI ~ Venlafaxine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>SSRI ~ Citalopram</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Statins ~ Atorvastatin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Stimulants ~ Methylphenidate</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Sulfa antibiotics ~ Sulfamethoxazole-Trimethoprim</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Sulfonylureas ~ Glyburide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Supplements ~ Calcium</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Supplements ~ Potassium</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Supplements ~ Vitamin D</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Sympathomimetics ~ Epinephrine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Systemic corticosteroids ~ Prednisone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Taxanes ~ Paclitaxel</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Terbinafine ~ Terbinafine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Thiazide diuretics ~ Hydrochlorothiazide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Thiazolidinediones ~ Rosiglitazone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Thioamides ~ Methimazole</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Thrombolytics ~ Streptokinase</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Thyroid ~ Levothyroxine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>TNF inhibitors ~ Etanercept</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Topical steroids ~ Hydrocortisone</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Topiramate ~ Topiramate</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Topoisomerase inhibitor ~ Etoposide</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Tricyclic antidepressants ~ Amitriptyline</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Triptans ~ Sumatriptan</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Tyrosine kinase inhibitor ~ Erlotinib</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Valproate ~ Valproic Acid</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Vasopressin ~ Vasopressin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Vinca alkaloids ~ Vincristine</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Vitamin K antagonists ~ Warfarin</ChildItemName>
+  </ChildItem>
+  <ChildItem>
+    <ParentCategoryName>ALL</ParentCategoryName>
+    <ChildItemName>Xanthine oxidase inhibitor ~ Allopurinol</ChildItemName>
+  </ChildItem>
+</ArrayOfChildItem>

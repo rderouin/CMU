@@ -1,0 +1,3 @@
+This placeholder file ensures the [empty] folder is included in the deployment.
+
+This is a bug: http://connect.microsoft.com/VisualStudio/feedback/details/546356/publish-deploy-does-not-deploy-empty-folders

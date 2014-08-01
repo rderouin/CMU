@@ -1,0 +1,483 @@
+﻿@model CurriculumManagement.ViewModels.DetailsPageViewModel
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+    hr.divider {
+        border: none;
+        height: 2px;
+        /* Set the hr color */
+        color: #333; /* old IE */
+        Background-color: #333; /* Modern Browsers */
+    }
+    .highlighted {
+        Background-color: lightyellow;
+    }
+</style>
+
+<h2>Details</h2>
+
+<div class="well">
+@if (Model.ParentExtractedEAForm != null)
+{
+    <h4>Working copy of EA Form</h4>
+}
+else
+{ 
+    <h4>Locked one45 original extraction</h4>
+}
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.AcademicYear)
+        </dt>
+
+        @if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.AcademicYear != Model.ParentExtractedEAForm.AcademicYear)
+        {
+        @:<dd class='highlighted'>
+        }
+        else
+        {
+        @:<dd>
+        }
+        @Html.DisplayFor(model => model.WorkingCopyEAForm.AcademicYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.Course)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.Course != Model.ParentExtractedEAForm.Course)
+{
+        @:<dd class='highlighted'>
+}
+else
+{   
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.Course)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.BlockWeekTitle)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.BlockWeekTitle != Model.ParentExtractedEAForm.BlockWeekTitle)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.BlockWeekTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.ActivityTitle)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.ActivityTitle != Model.ParentExtractedEAForm.ActivityTitle)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.ActivityTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.ActivityType)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.ActivityType != Model.ParentExtractedEAForm.ActivityType)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.ActivityType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.ActivityFacilitatorType)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.ActivityFacilitatorType != Model.ParentExtractedEAForm.ActivityFacilitatorType)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.ActivityFacilitatorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.OtherActivityFacilitatorType)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.OtherActivityFacilitatorType != Model.ParentExtractedEAForm.OtherActivityFacilitatorType)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.OtherActivityFacilitatorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.ActivityFacilitatorNames)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.ActivityFacilitatorNames != Model.ParentExtractedEAForm.ActivityFacilitatorNames)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.ActivityFacilitatorNames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.ActivityFacilitatorDepartments)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.ActivityFacilitatorDepartments != Model.ParentExtractedEAForm.ActivityFacilitatorDepartments)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.ActivityFacilitatorDepartments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.Abstract)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.Abstract != Model.ParentExtractedEAForm.Abstract)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.Abstract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.LearningObjectives)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.LearningObjectives != Model.ParentExtractedEAForm.LearningObjectives)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.Raw(Html.Encode(Model.WorkingCopyEAForm.LearningObjectives).Replace("\r\n", "<br />"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.Keywords)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.Keywords != Model.ParentExtractedEAForm.Keywords)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.Raw(Html.Encode(Model.WorkingCopyEAForm.Keywords).Replace("\r\n", "<br />"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.Themes)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.Themes != Model.ParentExtractedEAForm.Themes)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.Themes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.Formulary)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.Formulary != Model.ParentExtractedEAForm.Formulary)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.Formulary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.StartDate)
+        </dt>
+
+    @if (Model.ParentExtractedEAForm != null && !Model.CompareNullableDates(Model.WorkingCopyEAForm.StartDate, Model.ParentExtractedEAForm.StartDate))
+    {
+        @:<dd class='highlighted'>
+    }
+    else
+    {
+        @:<dd>
+    }
+    @Html.DisplayFor(model => model.WorkingCopyEAForm.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.LastSubmitted)
+        </dt>
+
+        @if (Model.ParentExtractedEAForm != null && !Model.CompareNullableDates(Model.WorkingCopyEAForm.LastSubmitted, Model.ParentExtractedEAForm.LastSubmitted))
+        {
+            @:<dd class='highlighted'>
+        }
+        else
+        {
+            @:<dd>
+        }
+        @Html.DisplayFor(model => model.WorkingCopyEAForm.LastSubmitted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.LastUpdated)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && !Model.CompareNullableDates(Model.WorkingCopyEAForm.LastUpdated, Model.ParentExtractedEAForm.LastUpdated))
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.LastUpdated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.InstructorSignature)
+        </dt>
+        @if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.InstructorSignature != Model.ParentExtractedEAForm.InstructorSignature)
+        {
+            @:<dd class='highlighted'>
+        }
+        else
+        {
+            @:<dd>
+        }
+        @Html.DisplayFor(model => model.WorkingCopyEAForm.InstructorSignature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCopyEAForm.Status)
+        </dt>
+
+@if (Model.ParentExtractedEAForm != null && Model.WorkingCopyEAForm.Status.Name != Model.ParentExtractedEAForm.Status.Name)
+{
+        @:<dd class='highlighted'>
+}
+else
+{
+        @:<dd>
+}
+            @Html.DisplayFor(model => model.WorkingCopyEAForm.Status.Name)
+        </dd>
+
+    </dl>
+</div>
+@if (Model.ParentExtractedEAForm != null)
+{ 
+<hr class="divider" />
+<div class="well">
+    <h4>Locked one45 original extraction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.AcademicYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.AcademicYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.Course)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.Course)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.BlockWeekTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.BlockWeekTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.ActivityTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.ActivityTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.ActivityType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.ActivityType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.ActivityFacilitatorType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.ActivityFacilitatorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.OtherActivityFacilitatorType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.OtherActivityFacilitatorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.ActivityFacilitatorNames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.ActivityFacilitatorNames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.ActivityFacilitatorDepartments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.ActivityFacilitatorDepartments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.Abstract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.Abstract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.LearningObjectives)
+        </dt>
+
+        <dd>
+            @Html.Raw(Html.Encode(Model.ParentExtractedEAForm.LearningObjectives).Replace("\r\n", "<br />"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.Keywords)
+        </dt>
+
+        <dd>
+            @Html.Raw(Html.Encode(Model.ParentExtractedEAForm.Keywords).Replace("\r\n", "<br />"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.Themes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.Themes)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.Formulary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.Formulary)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.LastSubmitted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.LastSubmitted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.LastUpdated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.LastUpdated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.InstructorSignature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.InstructorSignature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentExtractedEAForm.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentExtractedEAForm.Status.Name)
+        </dd>
+
+    </dl>
+</div>
+}
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WorkingCopyEAForm.ID }) |
+    @*@Html.ActionLink("Back to List", "Index")*@
+    <a href="javascript: window.history.go(-1)">Back to List</a>
+</p>

@@ -1,0 +1,22 @@
+﻿.smalltext {
+    font-size:12px;
+}
+
+.large-textarea {
+    max-width:900px;
+    width:900px;
+    height:600px;
+}
+
+input.text-box{
+max-width: 500px;
+}
+
+.medium-width{
+width: 300px;
+}
+
+.text-area {
+        width: 400px;
+        height:100px;
+    }
