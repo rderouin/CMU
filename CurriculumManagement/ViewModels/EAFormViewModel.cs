@@ -78,7 +78,7 @@ namespace CurriculumManagement.ViewModels
         [Display(Name = "Keyword(s)")]
         public ParentChildCategoriesViewModel KeywordViewModel { get; set; }
         [DisplayFormat(ConvertEmptyStringToNull = false)]
-        public string Keyword
+        public string Keywords
         {
             get
             {

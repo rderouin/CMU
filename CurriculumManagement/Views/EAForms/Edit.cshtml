@@ -165,18 +165,17 @@
 
                     <div class="control-group">
                         @Html.LabelFor(model => model.KeywordViewModel, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.EditorFor(model => model.KeywordViewModel)
+                            @Html.ValidationMessageFor(model => model.KeywordViewModel)
+                        </div>
                     </div>
-                    <div class="control-group">
-                        @Html.EditorFor(model => model.KeywordViewModel)
-                        @Html.ValidationMessageFor(model => model.KeywordViewModel)
-                    </div>
-
                     <div class="control-group">
                         @Html.LabelFor(model => model.ThemesViewModel, new { @class = "control-label" })
-                    </div>
-                    <div class="control-group">
-                        @Html.EditorFor(model => model.ThemesViewModel)
-                        @Html.ValidationMessageFor(model => model.ThemesViewModel)
+                        <div class="controls">
+                            @Html.EditorFor(model => model.ThemesViewModel)
+                            @Html.ValidationMessageFor(model => model.ThemesViewModel)
+                        </div>
                     </div>
                     <div class="control-group">
                         @Html.LabelFor(model => model.FormularyViewModel, new { @class = "control-label" })
@@ -185,6 +184,7 @@
                             @Html.ValidationMessageFor(model => model.FormularyViewModel)
                         </div>
                     </div>
+                    
 
 
                     <div class="control-group">

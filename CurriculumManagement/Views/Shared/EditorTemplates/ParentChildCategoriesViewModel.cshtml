@@ -1,6 +1,8 @@
 ﻿@model CurriculumManagement.ViewModels.ParentChildCategoriesViewModel
 
 @*@Scripts.Render("~/bundles/jquery")*@
+
+ @*//http://jqueryui.com/autocomplete/#remote-jsonp*@
 <link href="~/Content/jquery-ui.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-ui.js"></script>
 <script src="~/Scripts/jquery-1.10.2.js"></script>
@@ -85,14 +87,15 @@
               {
                   $("#@Html.IdForModel()_SelectedChildrenList").prepend($('<option></option>').val($("#txtSearch").val()).html($("#txtSearch").val()));
               }
-              else {
+              else
+              {
                   $("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").prop("selected", true);
               }
           }
         );
 
         $("form").submit(function (e) {
-            $("#@Html.IdForModel()_SelectedChildrenList option").prop('selected', true); //.attr("selected", "selected");
+            $("#@Html.IdForModel()_SelectedChildrenList").find("option").attr("selected", true);
         });
     });
 
@@ -126,12 +129,12 @@
 
     </div>
     <div class="form-button-column">
-        @if(Model.Label != "Keyword(s)")
+        @if (Model.Label != "Keyword(s)")
         {
             <input type="button" id="@Html.IdForModel()_btnAddSelectedChild" value="Add Selection >>" />
         }
         else
-        { 
+        {
             <input type="button" id="@Html.IdForModel()_btnAddKeywords" value="Add Selection >>" />
         }
     </div>

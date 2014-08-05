@@ -10,6 +10,7 @@ using AutoMapper;
 using CurriculumManagement.Helpers;
 using PagedList;
 using CurriculumManagement.Models.POCO;
+using System.Data.Entity.Validation;
 
 namespace CurriculumManagement.Controllers
 {
@@ -494,7 +495,7 @@ namespace CurriculumManagement.Controllers
             eaform = Mapper.Map<EAFormViewModel, EAForm>(editPageViewModel, eaform);
             eaform.Status = db.EAFormStatuses.Find(editPageViewModel.SelectedStatusValue);
             eaform.LastUpdated = DateTime.Now;
-            eaform.CreateSaveHistoryRecord(User.Identity.Name);
+            eaform.CreateSaveHistoryRecord("rderouin");//User.Identity.Name);
 
             if (ModelState.IsValid)
             {
@@ -504,10 +505,24 @@ namespace CurriculumManagement.Controllers
                     db.SaveChanges();
                     ViewBag.SuccessMessage = "Saved successfully"; // UI.SaveSuccess;
                 }
-                catch (Exception ex)
+                catch (DbEntityValidationException ex)
                 {
                     ModelState.AddModelError("EditForm", "Form could not be saved"); //ErrorMessages.SaveError);
                     Elmah.ErrorSignal.FromCurrentContext().Raise(ex);
+
+                    string errorMessage = string.Empty;
+                    //debug code
+                    foreach (var err in ex.EntityValidationErrors)
+                    {
+                        System.Diagnostics.Debug.WriteLine(string.Format("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:", err.Entry.Entity.GetType().Name, err.Entry.State));
+
+                        foreach (var ve in err.ValidationErrors)
+                        {
+                            System.Diagnostics.Debug.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                                ve.PropertyName, ve.ErrorMessage);
+                        }
+
+                    }
                 }
             }
             else
