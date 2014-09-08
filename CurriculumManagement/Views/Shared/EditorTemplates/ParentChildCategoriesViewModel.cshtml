@@ -65,6 +65,7 @@
         $("#txtSearch").autocomplete
         ({
             source: '@Url.Action("GetKeywords","EAForms")'
+            , change: function (event, ui) { if (!ui.item) { this.value = null; } }
             , minLength: 2
             , delay: 500
             , open: function () { $(this).removeClass("ui-corner-all").addClass("ui-corner-top"); }
@@ -81,15 +82,17 @@
         $("#@Html.IdForModel()_btnAddKeywords").click
         (
           function () {
-              $("#@Html.IdForModel()_SelectedChildrenList option").prop("selected", false);
+              if ($("#txtSearch").val().length > 2) {
 
-              if ($("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").length <= 0) //Check to see if already exists
-              {
-                  $("#@Html.IdForModel()_SelectedChildrenList").prepend($('<option></option>').val($("#txtSearch").val()).html($("#txtSearch").val()));
-              }
-              else
-              {
-                  $("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").prop("selected", true);
+                  $("#@Html.IdForModel()_SelectedChildrenList option").prop("selected", false);
+
+                  if ($("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").length <= 0) //Check to see if already exists
+                  {
+                      $("#@Html.IdForModel()_SelectedChildrenList").prepend($('<option></option>').val($("#txtSearch").val()).html($("#txtSearch").val()));
+                  }
+                  else {
+                      $("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").prop("selected", true);
+                  }
               }
           }
         );
