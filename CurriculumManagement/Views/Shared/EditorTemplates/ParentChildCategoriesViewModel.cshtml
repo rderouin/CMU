@@ -65,7 +65,6 @@
         $("#txtSearch").autocomplete
         ({
             source: '@Url.Action("GetKeywords","EAForms")'
-            , change: function (event, ui) { if (!ui.item) { this.value = null; } }
             , minLength: 2
             , delay: 500
             , open: function () { $(this).removeClass("ui-corner-all").addClass("ui-corner-top"); }
