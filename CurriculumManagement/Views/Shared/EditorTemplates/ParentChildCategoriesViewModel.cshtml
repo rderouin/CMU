@@ -47,9 +47,8 @@
         @*//autocomplete for keywords*@
         @*//http://jqueryui.com/autocomplete/#remote-jsonp*@
         @*Begin autocomplete*@
-
         $(document).ready(function () {
-            $("#txtSearch").val("code reached");
+
             $("#txtSearch").autocomplete
             ({
                 source: '@Url.Action("GetKeywords","EAForms")'

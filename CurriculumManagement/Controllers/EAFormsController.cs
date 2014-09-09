@@ -297,7 +297,9 @@ namespace CurriculumManagement.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var viewmodel = new ReviewPageViewModel();
+            ViewBag.Title = "Review";
+
+            var reviewPageViewModel = new ReviewPageViewModel();
 
             EAForm eaform = db.EAForms.Find(id);
             if (eaform == null)
@@ -312,48 +314,12 @@ namespace CurriculumManagement.Controllers
 
             //Statuses
 
-            viewmodel = Mapper.Map<EAForm, ReviewPageViewModel>(eaform, viewmodel);
-            viewmodel.SetupMultiSelectViewModels(eaform);
+            reviewPageViewModel = Mapper.Map<EAForm, ReviewPageViewModel>(eaform, reviewPageViewModel);
+            reviewPageViewModel.SetupMultiSelectViewModels(eaform);
 
-            return View("Review", "_UnauthLayout", viewmodel);
+            return View("Review", "_UnauthLayout", reviewPageViewModel);
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //[MultipleButton(Name = "Review", Argument = "Submit")]
-        //public ActionResult ReviewSubmit(ReviewPageViewModel viewmodel)
-        //{
-        //    EAForm eaform = db.EAForms.Find(viewmodel.ID);
-        //    if (eaform == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-
-        //    if (ModelState.IsValid)
-        //    {
-        //        eaform = Mapper.Map<ReviewPageViewModel, EAForm>(viewmodel, eaform);
-        //        //Set the status and timestamp(s)
-        //        eaform.Status = db.EAFormStatuses.First(p => p.Name == "Submitted");
-        //        eaform.LastUpdated = DateTime.Now; 
-        //        eaform.LastSubmitted = DateTime.Now;
-        //        eaform.CreateSaveHistoryRecord(viewmodel.InstructorSignature);
-        //        db.Entry(eaform).State = EntityState.Modified;
-        //        db.SaveChanges();
-        //        return Content("submit:Thank you for submitting your review", "text/html");
-        //    }
-        //    else
-        //    {
-        //        var errors = ModelState.Values.SelectMany(v => v.Errors);
-        //        foreach (var error in errors)
-        //        {
-        //            if (error.Exception != null)
-        //                Elmah.ErrorSignal.FromCurrentContext().Raise(error.Exception);
-        //            else
-        //                Elmah.ErrorSignal.FromCurrentContext().Raise(new Exception(error.ErrorMessage));
-        //        }
-        //        return Content("submit:Review could not be submitted", "text/html");
-        //    }
-        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
