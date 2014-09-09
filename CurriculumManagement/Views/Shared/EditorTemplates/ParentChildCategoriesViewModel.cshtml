@@ -24,19 +24,12 @@
             $("#@Html.IdForModel()_SelectedChildrenList option").prop("selected", false);
             $('#@Html.IdForModel()_ChildrenListBox option:selected').each(function () {
                 $("#@Html.IdForModel()_ChildrenListBox option").prop("selected", false);
-                @*if (($("#@Html.IdForModel()_SelectedChildrenList option[value='" + $(this).val() + "']").length <= 0) && ($("#@Html.IdForModel()_SelectedChildrenList option").length < 10))
-                {
-                    $('#@Html.IdForModel()_SelectedChildrenList')
-                            .prepend('<option value="' + $(this).val() + '" selected>' + $(this).val() + '</option>')
-                    .val(selectionString) //to select just added item
-                }*@
                 if ($("#@Html.IdForModel()_SelectedChildrenList option[value='" + $(this).val() + "']").length <= 0) //Check to see if already exists
                 {
                     alert($('#identifier').val());
 
                     $('#@Html.IdForModel()_SelectedChildrenList')
                             .prepend('<option value="' + $(this).val() + '" selected>' + $(this).val() + '</option>')
-                    //.val(selectionString) //to select just   added item
                 }
                 else {
                     $("#@Html.IdForModel()_SelectedChildrenList option[value='" + $(this).val() + "']").prop("selected", true);
@@ -62,7 +55,7 @@
                 source: '@Url.Action("GetKeywords","EAForms")'
                 , change: function (event, ui) { if (!ui.item) { this.value = null; } }
                 , minLength: 2
-                , delay: 500
+                , delay: 250
                 , open: function () { $(this).removeClass("ui-corner-all").addClass("ui-corner-top"); }
                 , close: function () { $(this).removeClass("ui-corner-top").addClass("ui-corner-all"); }
             });
@@ -77,7 +70,7 @@
             $("#@Html.IdForModel()_btnAddKeywords").click
             (
               function () {
-                  if ($("#txtSearch").val().length > 2) {
+                  if ($("#txtSearch").val().length > 2) { //Doesn't allow for empty string or null selection
 
                       $("#@Html.IdForModel()_SelectedChildrenList option").prop("selected", false);
 
@@ -105,11 +98,11 @@
         {
             <input type="hidden" name="identifier" id="identifier" value="Keyword" />
 
-            using (Html.BeginForm("Review", "EAFormsController"))
-            {
+            @*using (Html.BeginForm("Review", "EAFormsController"))*@
+
                 @Html.Label("Search Keywords", null, new {@class="form-options-label"}) 
                 @Html.TextBox("searchTerm", null, new {id="txtSearch" })
-            }
+            
         }
         else
         {
