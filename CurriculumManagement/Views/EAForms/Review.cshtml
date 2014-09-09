@@ -82,27 +82,6 @@
         $(document).ready(function(){
             $(".tooltip").tooltip({placement: 'right'});
         });
-
-        //function HandleOtherFacilitatorType() {
-        //    if ($("input[name=ActivityFacilitatorType]:checked").attr('value') != "Other") {
-        //        $('#OtherActivityFacilitatorType').val('');
-        //        $('#OtherActivityFacilitatorType').attr("disabled", "disabled");
-        //    }
-        //    else {
-        //        $('#OtherActivityFacilitatorType').removeAttr("disabled");
-        //    }
-        //}
-
-        //$(function () {
-        //    $('.facilitator-type').change(function () {
-        //        HandleOtherFacilitatorType();
-        //        });
-        //});
-
-        //$(document).ready(function () {
-        //    HandleOtherFacilitatorType();
-        //});
-
     </script>
 
 </head>
@@ -290,23 +269,12 @@
                                         @Html.ValidationMessageFor(model => model.LearningObjectives)
                                     </div>
                                 </div>
-
-                                @*<div class="control-group">
-                                    <div class="control-label-with-tooltip">
-                                        @Html.LabelFor(model => model.Keywords, new { @class = "control-label" })
-                                        <a id="tooltip-keywords" title="(Optional) Select 5 – 10 descriptors for your session (one descriptor per line). Click [?] for guidance." href="https://mednet.med.ubc.ca/Teaching/curriculum-management/resources/Pages/Keywords.aspx" class="tooltip" target="_blank">[?]</a>
-                                    </div>
-                                    <div class="controls">
-                                        @Html.TextAreaFor(model => model.Keywords, new { rows = 10, @class = "textArea"  })
-                                        @Html.ValidationMessageFor(model => model.Keywords)
-                                    </div>
-                                </div>*@
                                 <div class="control-group">
                                     @Html.LabelFor(model => model.KeywordViewModel, new { @class = "control-label" })
-                                </div>
-                                <div class="control-group">
-                                    @Html.EditorFor(model => model.KeywordViewModel)
-                                    @Html.ValidationMessageFor(model => model.KeywordViewModel)
+                                    <div class="controls">
+                                        @Html.EditorFor(model => model.KeywordViewModel)
+                                        @Html.ValidationMessageFor(model => model.KeywordViewModel)
+                                    </div>
                                 </div>
 
                                 <div class="control-group">

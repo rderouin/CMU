@@ -1,13 +1,5 @@
 ﻿@model CurriculumManagement.ViewModels.ParentChildCategoriesViewModel
 
-@*@Scripts.Render("~/bundles/jquery")*@
-
- @*//http://jqueryui.com/autocomplete/#remote-jsonp*@
-<link href="~/Content/jquery-ui.css" rel="stylesheet" />
-<script src="~/Scripts/jquery-ui.js"></script>
-<script src="~/Scripts/jquery-1.10.2.js"></script>
-<script src="~/Scripts/jquery-ui.min.js"></script>
-
 
 <script type="text/jscript">
 
@@ -62,41 +54,44 @@
         @*//autocomplete for keywords*@
         @*//http://jqueryui.com/autocomplete/#remote-jsonp*@
         @*Begin autocomplete*@
-        $("#txtSearch").autocomplete
-        ({
-            source: '@Url.Action("GetKeywords","EAForms")'
-            , change: function (event, ui) { if (!ui.item) { this.value = null; } }
-            , minLength: 2
-            , delay: 500
-            , open: function () { $(this).removeClass("ui-corner-all").addClass("ui-corner-top"); }
-            , close: function () { $(this).removeClass("ui-corner-top").addClass("ui-corner-all"); }
-        });
-        @*End autocomplete*@
 
-        @*Add custom key selected items click event*@
-        function AutoCompleteSelectHandler(event, ui) {
-            var selectedObj = ui.item;
-            $("#KeywordViewModel_ChildrenListBox").append($('<option></option>').val(ui.item.label).html(ui.item.label));
-        }
+        $(document).ready(function () {
+            $("#txtSearch").val("code reached");
+            $("#txtSearch").autocomplete
+            ({
+                source: '@Url.Action("GetKeywords","EAForms")'
+                , change: function (event, ui) { if (!ui.item) { this.value = null; } }
+                , minLength: 2
+                , delay: 500
+                , open: function () { $(this).removeClass("ui-corner-all").addClass("ui-corner-top"); }
+                , close: function () { $(this).removeClass("ui-corner-top").addClass("ui-corner-all"); }
+            });
+            @*End autocomplete*@
 
-        $("#@Html.IdForModel()_btnAddKeywords").click
-        (
-          function () {
-              if ($("#txtSearch").val().length > 2) {
+            @*Add custom key selected items click event*@
+            function AutoCompleteSelectHandler(event, ui) {
+                var selectedObj = ui.item;
+                $("#KeywordViewModel_ChildrenListBox").append($('<option></option>').val(ui.item.label).html(ui.item.label));
+            }
 
-                  $("#@Html.IdForModel()_SelectedChildrenList option").prop("selected", false);
+            $("#@Html.IdForModel()_btnAddKeywords").click
+            (
+              function () {
+                  if ($("#txtSearch").val().length > 2) {
 
-                  if ($("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").length <= 0) //Check to see if already exists
-                  {
-                      $("#@Html.IdForModel()_SelectedChildrenList").prepend($('<option></option>').val($("#txtSearch").val()).html($("#txtSearch").val()));
-                  }
-                  else {
-                      $("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").prop("selected", true);
+                      $("#@Html.IdForModel()_SelectedChildrenList option").prop("selected", false);
+
+                      if ($("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").length <= 0) //Check to see if already exists
+                      {
+                          $("#@Html.IdForModel()_SelectedChildrenList").prepend($('<option></option>').val($("#txtSearch").val()).html($("#txtSearch").val()));
+                      }
+                      else {
+                          $("#@Html.IdForModel()_SelectedChildrenList option[value='" + $("#txtSearch").val() + "']").prop("selected", true);
+                      }
                   }
               }
-          }
-        );
-
+            );
+        });
         $("form").submit(function (e) {
             $("#@Html.IdForModel()_SelectedChildrenList").find("option").attr("selected", true);
         });
@@ -110,7 +105,7 @@
         {
             <input type="hidden" name="identifier" id="identifier" value="Keyword" />
 
-            using (Html.BeginForm("Edit", "EAFormsController"))
+            using (Html.BeginForm("Review", "EAFormsController"))
             {
                 @Html.Label("Search Keywords", null, new {@class="form-options-label"}) 
                 @Html.TextBox("searchTerm", null, new {id="txtSearch" })

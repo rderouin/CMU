@@ -17,7 +17,8 @@ namespace CurriculumManagement
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery.ui.core.js",
                         "~/Scripts/jquery.ui.widget.js",
-                        "~/Scripts/jquery.ui.datepicker.js"));
+                        "~/Scripts/jquery.ui.datepicker.js",
+                        "~/Scripts/jquery-ui.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery-unobtrusive-ajax").Include(
                         "~/Scripts/jquery.unobtrusive-ajax.js"));
@@ -37,11 +38,13 @@ namespace CurriculumManagement
                      * "~/Content/bootstrap.css",
                     "~/Content/cmu-custom.css",
                     "~/Content/site.css"));*/
-                    "~/Content/unit.css"));
+                    "~/Content/unit.css",
+                    "~/Content/jquery-ui.css"));
 
 
             bundles.Add(new StyleBundle("~/Content/jqueryui").Include(
-                      "~/Content/jquery.ui.all.css"));
+                      "~/Content/jquery.ui.all.css",
+                      "~/Content/jquery-ui.css"));
 
             bundles.IgnoreList.Clear();
             bundles.DirectoryFilter.Clear();
